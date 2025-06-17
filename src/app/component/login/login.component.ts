@@ -13,6 +13,7 @@ export class LoginComponent {
       this.loginResultCount++;
    }
     onLogout() {
+        if(this.loginResultCount>0)
         this.loginResultCount--;
     }
 }
