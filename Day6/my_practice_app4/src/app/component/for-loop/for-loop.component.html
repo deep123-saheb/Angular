@@ -1,0 +1,16 @@
+<p>for-loop works!</p>
+
+@for(user of users; track user ; let i = $index) {
+  <p>{{i}} - {{user}}</p>
+}
+
+<h2>student list</h2>
+ <span>student name -> {{dName}}</span><br><br>
+
+
+@for(student of students; track student ; let i = $index) {
+  <span>{{i}} - {{student.name}} - {{student.age}} - {{student.email}}</span> &nbsp; &nbsp;
+  <button (click)="getName(student.name)">Get Name</button> &nbsp;
+  <br>
+  <br>
+}

@@ -1,0 +1,16 @@
+<p>signals works!</p>
+<h1>Count: {{ count() }}</h1>
+<button (click)="increment()">Increment</button>
+<button (click)="reset()">Reset</button>
+<button (click)="decrement()">Decrement</button>
+<hr />
+
+<h2>signals with data types</h2>
+<p>Data: {{ data() }}</p>
+<button (click)="changeData()">
+  {{ data() === "Hello" ? "Change to number" : "Change to Hello" }}
+</button>
+
+
+<h2>computed signals</h2>
+<p>{{ x() }}</p>

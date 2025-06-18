@@ -1,0 +1,21 @@
+<h1>Else If Control Flow Statement</h1>
+<button (click)="setColor('red')">Red</button>&nbsp;
+<button (click)="setColor('yellow')">Yellow</button>&nbsp;
+<button (click)="setColor('green')">Green</button>&nbsp;
+<input type="text" (input)="setNum(inputField.value)" #inputField/>
+<br>
+<br>
+
+@if(color === 'red'||num === '1'){
+  <div style="background-color: red;height: 200px;width: 200px;"></div>
+}
+@else if(color === 'yellow'||num=== '2'){
+  <div style="background-color: yellow;height: 200px;width: 200px;"></div>
+}
+@else if(color === 'green'||num === '3'){
+  <div style="background-color: green;height: 200px;width: 200px;"></div>
+}
+@else{
+  <div style="background-color: black;height: 200px;width: 200px;"></div>
+}
+
