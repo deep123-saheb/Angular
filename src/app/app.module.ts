@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './component/login/login.component';
-import {ProfileComponent} from './component/profile/profile.component';
-import { MainComponent } from './component/main/main.component';
+import { CounterComponent } from './componet/counter/counter.component';
+import { EventComponent } from './componet/event/event.component';
+
 @NgModule({
   declarations: [
-    // Declare components here
     AppComponent,
-    LoginComponent,
-    MainComponent,
+    CounterComponent,
+    EventComponent
   ],
   imports: [
-    // Import necessary modules here
     BrowserModule,
-    ProfileComponent
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,10 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'demo_app';
-  name="Deepak Saheb";
-  x=10;
-  y=20;
-  user1="Deepak";
-  user2="Saheb";
+  title = 'my_practice1_app';
 }

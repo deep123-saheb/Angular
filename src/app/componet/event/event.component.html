@@ -1,0 +1,14 @@
+<h1>Event Component</h1>
+
+<button (click)="handleEvent($event)">Click Me</button>
+
+<br>
+<br>
+<div class="mouse-enter" (mouseenter)="handleEvent($event)" (mouseleave)="handleEvent($event)"></div>
+
+<br>
+<br>
+<input type="text" (input)="handleEvent($event)" (blur)="handleEvent($event)" (focus)="handleEvent($event)" placeholder="Type something here..."><br>
+
+
+
