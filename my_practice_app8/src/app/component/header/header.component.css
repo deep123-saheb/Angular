@@ -1,0 +1,26 @@
+nav{
+  display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+ul{
+      list-style: none;
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+}
+ul li a{
+  text-decoration: none;
+}
+.Active{
+  color: white;
+  font-weight: bold;
+  border:1px solid red;
+  padding: 5px;
+  background-color: skyblue
+}
+.Active:hover{
+  background-color: pink;
+  color: black;
+}
