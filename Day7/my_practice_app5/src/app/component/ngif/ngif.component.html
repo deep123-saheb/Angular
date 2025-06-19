@@ -1,0 +1,24 @@
+<div class="button-container">
+  <button (click)="changeColor('red')" >Red</button>
+  <button (click)="changeColor('green')" >Green</button>
+  <button (click)="changeColor('blue')" >Blue</button>
+  <button (click)="changeColor('yellow')" >Yellow</button>
+  <button (click)="changeColor('black')">Black</button>
+</div>
+<br>
+<br>
+
+<!-- Using ngIf with else -->
+<div *ngIf="color === dColor; then showIfBlock else showElseBlock"></div>
+
+<ng-template #showIfBlock>
+  <div [style.backgroundColor]="color"
+       class="color-box">
+  </div>
+</ng-template>
+
+<ng-template #showElseBlock>
+  <div [style.backgroundColor]="color"
+       class="color-box">
+  </div>
+</ng-template>

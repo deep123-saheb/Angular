@@ -1,0 +1,30 @@
+<p>ngswitch works!</p>
+<div class="button-container">
+  <button (click)="changeColor('red')" >Red</button>
+  <button (click)="changeColor('green')" >Green</button>
+  <button (click)="changeColor('blue')" >Blue</button>
+  <button (click)="changeColor('yellow')" >Yellow</button>
+  <button (click)="changeColor('black')" >Black</button>
+</div>
+
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'red'" class="color-box" [style.backgroundColor]="color">
+    <p>Selected Color: Red</p>
+  </div>
+
+  <div *ngSwitchCase="'green'" class="color-box" [style.backgroundColor]="color">
+    <p>Selected Color: Green</p>
+  </div>
+
+  <div *ngSwitchCase="'blue'" class="color-box" [style.backgroundColor]="color">
+    <p>Selected Color: Blue</p>
+  </div>
+
+  <div *ngSwitchCase="'yellow'" class="color-box" [style.backgroundColor]="color">
+    <p>Selected Color: Yellow</p>
+  </div>
+
+  <div *ngSwitchDefault class="color-box" [style.backgroundColor]="color">
+    <p>Default Color: Black</p>
+  </div>
+</div>

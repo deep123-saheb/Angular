@@ -1,0 +1,28 @@
+<h1>To Do List</h1>
+
+<input type="text" [(ngModel)]="newTask" placeholder="Add a new task" /> &nbsp;
+<button (click)="addTask()">Add Task</button> &nbsp;
+<button (click)="clearTasks()">Clear All Tasks</button>
+
+<br>
+<br>
+@for(task of taskList; track task.id) {
+<ul class="task-list">
+
+    <li>({{task.id}})</li>
+    <li>{{task.name}}</li>
+    <div class="action-item">
+      @if(editingTaskId===task.id){
+        <input type="text" [(ngModel)]="editedTaskName" />&nbsp;
+        <button (click)="saveTask(task.id)">✅</button> &nbsp;
+        <button (click)="cancelEdit()">❌</button> &nbsp;
+      }
+      @else {
+         <button (click)="editTask(task.id)">Edit</button> &nbsp;
+      }
+      <button (click)="removeTask(task.id)">Delete</button>
+    </div>
+    <br>
+  </ul>
+}
+

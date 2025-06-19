@@ -1,0 +1,9 @@
+<p>ngfor works!</p>
+
+<ul *ngFor ="let st of student; let i = index">
+  <li>{{i + 1}}. {{st}}</li>
+</ul>
+
+<ul *ngFor ="let student of studentDetails; let i = index">
+  <li>{{i + 1}} - {{student.name}} - {{student.age}}</li>
+</ul>

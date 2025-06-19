@@ -1,0 +1,19 @@
+<p>context-variable works!</p>
+
+@for(user of users; track user) { @if($first ||$last) {
+<div style="background-color: lightgreen">
+  <h3>First or Last User: {{ $index }}-- {{ user }}</h3>
+</div>
+}@else if($even) {
+<div style="background-color: lightblue">
+  <h3>Even User: {{ $index }}-- {{ user }}</h3>
+</div>}
+@else if($odd) {
+<div style="background-color: lightyellow">
+  <h3>Odd User: {{ $index }}-- {{ user }}</h3>
+</div>}
+@else {
+<div style="background-color: lightcoral">
+  <h3>Middle User: {{ $index }}-- {{ user }}</h3>
+</div>
+} }
