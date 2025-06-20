@@ -1,0 +1,50 @@
+<!-- <h2>User Information</h2>
+<ul>
+  <li>Name: {{ userName }}</li>
+  <li>Age: {{ userAge }}</li>
+  <li>Email: {{ userEmail }}</li>
+</ul>
+
+<div>input is :{{dInputValue}}</div>
+
+
+<input type="text" [value]='inputValue'[(ngModel)]="inputValue" placeholder="Type something..."><br>
+
+<button (click)="submit(inputValue)">submit</button>
+
+
+<ul>
+
+  <li *ngFor="let user of users">
+
+    <div *ngIf="user.salary >= 50000; else elseBlock">
+      <strong>High Salary User:</strong>
+      {{ user.name }} - {{ user.age }} - {{ user.email }} - {{ user.salary }}
+    </div>
+
+
+  </li>
+
+  <ng-template #elseBlock>
+    <li>No user found</li>
+  </ng-template>
+
+</ul>
+
+ -->
+<!-- pasing data from parent to child component using input decorator -->
+ <app-input-decorator
+ *ngFor="let user of users"
+ [userName]="user.name|uppercase"
+ [userAge]="user.age"
+ [userEmail]="user.email"
+ [userSalary]="user.salary"
+ [userCountry]="user.country"
+ [userPhone]="user.phone | countryCode:user.country"
+></app-input-decorator>
+
+<!-- passing data from child to parent component using output decorator -->
+  <!-- <app-output-decorator (myEvent)="receiveData($event)"></app-output-decorator> -->
+
+
+
